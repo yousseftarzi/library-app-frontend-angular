@@ -1,0 +1,8 @@
+<mat-form-field appearance="standard">
+  <input matInput placeholder="Search Book" [(ngModel)]="searchText">
+</mat-form-field>
+<h2 style="text-align: center">Book List</h2>
+<div *ngIf="books.length==0"> No Book Found</div>
+<app-book-list-single *ngFor="let b of books | search: searchText"
+          [book]="b" >
+</app-book-list-single>

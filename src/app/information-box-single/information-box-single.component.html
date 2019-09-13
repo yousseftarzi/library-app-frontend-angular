@@ -1,0 +1,17 @@
+<div class="form">
+  <mat-form-field class="code-width">
+    <div *ngIf="this.objectInput.valueOf()=='Student'">
+      <input matInput [formControl]="objectId" (change)="getObject(this.objectInput)" placeholder="{{this.objectInput }} Id">
+    </div>
+    <div *ngIf="this.objectInput.valueOf()=='Book'">
+      <input matInput [formControl]="objectId" (change)="getObject(this.objectInput)" placeholder="{{this.objectInput }} ISBN">
+    </div>
+    <div *ngIf="this.objectInput.valueOf()=='BookItem'">
+      <input matInput [formControl]="objectId" (change)="getObject(this.objectInput)" placeholder="{{this.objectInput }} Barcode">
+    </div>
+  </mat-form-field>
+
+  <mat-form-field class="full-width">
+    <textarea matInput [cdkTextareaAutosize]="true" [formControl]="objectInformation" placeholder="Information" readonly></textarea>
+  </mat-form-field>
+</div>

@@ -1,0 +1,7 @@
+<div class="information-box-container">
+<app-information-box-single #book [objectInput]="'Book'"></app-information-box-single>
+  <mat-form-field>
+    <input type="number" name="barcode" matInput #bookItemBarcode placeholder="Barcode of Copy" required>
+  </mat-form-field>
+  <button mat-stroked-button (click)="click(book.object,bookItemBarcode.value)">Add Copy</button>
+</div>
