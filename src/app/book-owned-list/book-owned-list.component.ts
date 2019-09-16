@@ -4,6 +4,7 @@ import {BookService} from '../Services/book.service';
 import {TransactionService} from '../Services/transaction.service';
 import {Transaction} from '../Entities/transaction';
 import {AuthenticationService} from '../Services/authentication.service';
+import {filter, map} from 'rxjs/operators';
 
 @Component({
   selector: 'app-book-owned-list',
@@ -34,7 +35,9 @@ export class BookOwnedListComponent implements OnInit {
   }
 
   public getAllTransaction() {
-    this.transactionService.getAllTransaction(this.studentId).subscribe(
+    this.transactionService.getAllTransaction(this.studentId).pipe(map(tr=> tr.filter(
+      trsingle=> !trsingle.returned
+    ))).subscribe(
       res => {
         this.transactions = res;
       },

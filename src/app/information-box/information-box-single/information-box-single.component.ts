@@ -1,11 +1,11 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {BookItemService} from '../Services/book-item.service';
-import {StudentService} from '../Services/student.service';
-import {Student} from '../Entities/student';
-import {BookItem} from '../Entities/book-item';
+import {BookItemService} from '../../Services/book-item.service';
+import {StudentService} from '../../Services/student.service';
+import {Student} from '../../Entities/student';
+import {BookItem} from '../../Entities/book-item';
 import {FormControl} from '@angular/forms';
-import {Book} from '../Entities/book';
-import {BookService} from '../Services/book.service';
+import {Book} from '../../Entities/book';
+import {BookService} from '../../Services/book.service';
 
 @Component({
   selector: 'app-information-box-single',

@@ -3,7 +3,6 @@
 
   <div *ngIf="role=='Student'">
   <button mat-button routerLink="/student/owned">Owned</button>
-  <button mat-button >Profile</button>
   <button mat-button [matMenuTriggerFor]="menu">Category</button>
   <mat-menu #menu="matMenu"> <div *ngFor="let c of category">
     <button mat-menu-item [routerLink]="['/book/category/', c]">{{c}}</button>

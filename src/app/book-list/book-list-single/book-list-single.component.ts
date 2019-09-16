@@ -1,7 +1,7 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
-import {Book} from '../Entities/book';
-import {BookService} from '../Services/book.service';
+import {BookService} from '../../Services/book.service';
 import {DomSanitizer} from '@angular/platform-browser';
+import {Book} from '../../Entities/book';
 
 @Component({
   selector: 'app-book-list-single',

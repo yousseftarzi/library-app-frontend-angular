@@ -23,18 +23,17 @@ import { BookListComponent } from './book-list/book-list.component';
 import { BookOwnedListComponent } from './book-owned-list/book-owned-list.component';
 import { BookFormComponent } from './book-form/book-form.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
-import { BookListSingleComponent } from './book-list-single/book-list-single.component';
-import { BookOwnedListSingleComponent } from './book-owned-list-single/book-owned-list-single.component';
+import { BookListSingleComponent } from './book-list/book-list-single/book-list-single.component';
+import { BookOwnedListSingleComponent } from './book-owned-list/book-owned-list-single/book-owned-list-single.component';
 import {HttpClientModule} from '@angular/common/http';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { InformationBoxComponent } from './information-box/information-box.component';
-import { InformationBoxSingleComponent } from './information-box-single/information-box-single.component';
+import { InformationBoxSingleComponent } from './information-box/information-box-single/information-box-single.component';
 import { StudentPipe } from './Pipes/student.pipe';
 import {DynamicPipe} from './Pipes/dynamic.pipe';
 import { SearchPipe } from './Pipes/search.pipe';
 import { BookItemManagementComponent } from './book-item-management/book-item-management.component';
 import { LoginComponent } from './login/login.component';
-import { ImageTestComponent } from './image-test/image-test.component';
 
 @NgModule({
   declarations: [
@@ -54,8 +53,7 @@ import { ImageTestComponent } from './image-test/image-test.component';
     DynamicPipe,
     SearchPipe,
     BookItemManagementComponent,
-    LoginComponent,
-    ImageTestComponent
+    LoginComponent
   ],
   imports: [
     BrowserAnimationsModule,

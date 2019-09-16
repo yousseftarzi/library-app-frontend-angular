@@ -1,7 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {Book} from '../Entities/book';
-import {Transaction} from '../Entities/transaction';
-import {Student} from '../Entities/student';
+import {Transaction} from '../../Entities/transaction';
+import {DomSanitizer} from '@angular/platform-browser';
 
 @Component({
   selector: 'app-book-owned-list-single',
@@ -11,6 +10,7 @@ import {Student} from '../Entities/student';
 export class BookOwnedListSingleComponent implements OnInit {
 
   @Input() transaction: Transaction;
+  path: string;
 /*
   transaction1: Transaction = {
     id: null,
@@ -18,9 +18,10 @@ export class BookOwnedListSingleComponent implements OnInit {
     dateOfIssue: new Date(),
     returnDate: new Date("2019-09-30"),
   }*/
-  constructor() { }
+  constructor(private _DomSanitizerService: DomSanitizer) { }
 
   ngOnInit() {
+    this.path="http://127.0.0.1:8887/";
   }
 
 }
